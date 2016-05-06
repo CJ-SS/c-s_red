@@ -1,7 +1,7 @@
 #include "head.h"
 
-void regis(int,user*);
-void login(int,user*);
+void regis(int,user*,int);
+void login(int,user*,int);
 void pout()
 {
 	cout<<"*************************"<<endl;
@@ -27,10 +27,10 @@ while(1){
 	switch(k.sig)
 	{
 		case 1:
-			regis(s,&k);
+			regis(s,&k,sizeof(k));
 			break;
 		case 2:
-			login(s,&k);
+			login(s,&k,sizeof(k));
 			break;
 		default:
 			break;

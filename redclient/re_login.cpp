@@ -1,12 +1,13 @@
 #include "head.h"
+void red_group(int,user*);
 
-void regis(int s,user *k)
+void regis(int s,user *k,int l)
 {
 	cout<<"please enter one user name:"<<endl;
 	cin>>k->name;
 	cout<<"please enter password"<<endl;
 	cin>>k->password;
-	send(s,k,sizeof(k),0);
+	send(s,k,l,0);
 	int n;
 	recv(s,&n,4,0);
 	switch(n){
@@ -25,13 +26,13 @@ void regis(int s,user *k)
 }
 
 
-void login(int s,user *k)
+void login(int s,user *k,int l)
 {
 	cout<<"please enter one user name:"<<endl;
 	cin>>k->name;
 	cout<<"please enter password"<<endl;
 	cin>>k->password;
-	send(s,k,sizeof(k),0);
+	send(s,k,l,0);
 	int n;
 	recv(s,&n,4,0);
 	switch(n){

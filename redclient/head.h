@@ -17,14 +17,27 @@ public:
 	char password[30];
 	int us_id;
 	int sig;
-	char group_name[30];
-	int group_id;
-	int red_num;
-	float red_money;	
 };
 
 class group{
 public:
-	char group_name2[100][30];
-	int group_id2[100];
+	int sig;
+	int us_id;
+	char group_name[30];
+	int group_id;
+};
+
+class red{
+public:
+	int sig;
+	int us_id;
+	int group_id;
+	int red_num;
+	float red_money;
+};
+
+class group_name{
+public:
+	char group_name[100][30];
+	int group_id[100];
 };
