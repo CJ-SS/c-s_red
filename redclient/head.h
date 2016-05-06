@@ -41,3 +41,11 @@ public:
 	char group_name[100][30];
 	int group_id[100];
 };
+
+
+
+
+
+
+
+
