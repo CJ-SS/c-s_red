@@ -1,7 +1,7 @@
 object = rcilent.o re_group.o re_login.o
 
 main : $(object)
-	g++ -o main $(object)
+	g++ -o main $(object) -g
 
 $(object) : head.h
 

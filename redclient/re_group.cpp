@@ -60,16 +60,28 @@ void red_group(int s,user *k)
 {
 	while(1)
 	{
-		cin>>k->sig;
+		cout<<"***********************"<<endl;
+		cout<<endl<<"1.create group"<<endl;i
+		cout<<"2.see group"<<endl;
+		cout<<"3.red bag"<<endl;
+		cout<<"other out!"<<endl;
+		cout<<"***********************"<<endl;
+		int n;
+		cin>>k-sig;
+		n=k.sig;
+		send(s,&n,sizeof(n),0);
 		switch(k->sig)
 		{
 			case 1:
 				create_group(s,k);
 				break;
 			case 2:
-				see_group(s,k);
+				add_group(s,k);
 				break;
 			case 3:
+				see_group(s,k);
+				break;
+			case 4:
 				redbag(s,k);
 				break;	
 			default:

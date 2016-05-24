@@ -11,13 +11,13 @@ void regis(int s,user *k,int l)
 	int n;
 	recv(s,&n,4,0);
 	switch(n){
-		case 0:
+		case 7:
 			cout<<"regiser success"<<endl;
 			break;
-		case 1:
+		case 8:
 			cout<<"user name has been used!"<<endl;
 			break;
-		case 2:
+		case 9:
 			cout<<"register erro!"<<endl;
 			break;
 		default:
@@ -36,14 +36,17 @@ void login(int s,user *k,int l)
 	int n;
 	recv(s,&n,4,0);
 	switch(n){
-		case 0:
+		case 7:
 			cout<<"login success"<<endl;
 			red_group(s,k);
 			break;
-		case 1:
+		case 8:
 			cout<<"don't find user name!"<<endl;
 			break;
-		case 2:
+		case 9:
+			cout<<"login erro!"<<endl;
+			break;
+		case 10:
 			cout<<"password erro!"<<endl;
 			break;
 		default:
